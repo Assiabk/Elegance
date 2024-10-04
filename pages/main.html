@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store | Elegance 👗👒💄</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+  
+</head>
+<body class="bg-white">
+
+    <!-- Navigation Bar -->
+    <nav class="flex justify-between items-center p-6 bg-white shadow-md">
+        <h3 class="text-2xl font-bold text-gray-800">Elegance</h3>
+        
+        <ul class="hidden md:flex space-x-8 text-lg font-medium text-gray-600">
+            <li><a href="#home" class="hover:text-gray-900 cursor-pointer">Home</a></li>
+            <li><a href="#collections" class="hover:text-gray-900 cursor-pointer">Collections</a></li>
+            <li><a href="#contact" class="hover:text-gray-900 cursor-pointer">Contact</a></li>
+        </ul>
+        
+        <div class="flex items-center space-x-6">
+            <a href="#" class="text-gray-600 hover:text-gray-900">
+                <i class="fas fa-shopping-cart text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-600 hover:text-gray-900">
+                <i class="fas fa-user text-xl"></i>
+            </a>
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-gray-600 hover:text-gray-900">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="md:hidden bg-white p-6 shadow-md hidden">
+        <ul class="space-y-4 text-lg font-medium text-gray-600">
+            <li><a href="#home" class="hover:text-gray-900 cursor-pointer">Home</a></li>
+            <li><a href="#collections" class="hover:text-gray-900 cursor-pointer">Collections</a></li>
+            <li><a href="#contact" class="hover:text-gray-900 cursor-pointer">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Script to Toggle Mobile Menu -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Home Section with Background Image -->
+    <section class="Home h-screen flex items-center justify-center">
+        <div class="text-center text-white p-8 bg-black bg-opacity-60 rounded-lg">
+            <h1 class="text-4xl font-bold">Welcome to Our Store</h1>
+            <p class="mt-4 text-lg">Discover the latest collections of elegance</p>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="py-20">
+        <div class="container max-w-6xl mx-auto p-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Explore Our Collections</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white shadow-md p-4 rounded-lg hover:shadow-lg transition-shadow duration-300">
+                    <img src="https://i.pinimg.com/474x/b4/40/cb/b440cb36e9e23bcd64172cd230bd3486.jpg" 
+                        alt="Collection 1" class="w-full h-auto max-h-64 object-cover rounded-t-lg">
+                    <h3 class="text-lg font-bold mt-4 mb-2">Collection 1</h3>
+                    <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">View Collection</a>
+                </div>
+
+                <div class="bg-white shadow-md p-4 rounded-lg hover:shadow-lg transition-shadow duration-300">
+                    <img src="https://i.pinimg.com/474x/3a/9c/ee/3a9cee71ab480aedb483553984d96a31.jpg" 
+                        alt="Collection 2" class="w-full h-auto max-h-64 object-cover rounded-t-lg">
+                    <h3 class="text-lg font-bold mt-4 mb-2">Collection 2</h3>
+                    <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">View Collection</a>
+                </div>
+
+                <div class="bg-white shadow-md p-4 rounded-lg hover:shadow-lg transition-shadow duration-300">
+                    <img src="https://i.pinimg.com/474x/ba/1f/f6/ba1ff6bc06b588779d769d29737942a0.jpg" 
+                        alt="Collection 3" class="w-full h-auto max-h-64 object-cover rounded-t-lg">
+                    <h3 class="text-lg font-bold mt-4 mb-2">Collection 3</h3>
+                    <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">View Collection</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h3 class="text-4xl font-bold text-center text-gray-800 mb-6">Latest Collections</h3>
+
+    <div class="carousel">
+        <div class="carousel-wrapper">
+            <div class="carousel-slide">
+                <img src="https://i.pinimg.com/564x/1a/6e/6f/1a6e6fc01efbd65353511c3a8f144911.jpg" alt="Collection 1">
+                <img src="https://i.pinimg.com/474x/e8/83/ae/e883ae6d2fd01d3c0211498139375f5d.jpg" alt="Collection 2">
+                <img src="https://i.pinimg.com/474x/e6/c3/bb/e6c3bb35cea935ef66c33d556c9b9b31.jpg" alt="Collection 3">
+                <img src="https://i.pinimg.com/474x/02/d8/4c/02d84cc86c84efaaa60a13f7e9d37ef8.jpg" alt="Collection 4">
+                <img src="https://i.pinimg.com/474x/ef/b2/5a/efb25adffefc99165c3325dd026aedab.jpg" alt="Collection 5">
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container max-w-6xl mx-auto p-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Contact Us</h2>
+
+            <form class="space-y-4">
+                <div>
+                    <label for="name" class="block font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" class="block w-full mt-2 border-gray-300 rounded-md shadow-sm">
+                </div>
+
+                <div>
+                    <label for="email" class="block font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" class="block w-full mt-2 border-gray-300 rounded-md shadow-sm">
+                </div>
+
+                <div>
+                    <label for="message" class="block font-medium text-gray-700">Message</label>
+                    <textarea id="message" rows="4" class="block w-full mt-2 border-gray-300 rounded-md shadow-sm"></textarea>
+                </div>
+
+                <button type="submit" class="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-900">Submit</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
